@@ -5,7 +5,6 @@ let filePath = path.join(__dirname, 'secret-folder');
 
 fs.readdir(filePath, 'utf8', (err, files) => {
   if (err) throw err;    
-  //example - txt - 128.369kb  
   for (let i in files){
     let name = filePath + '/' + files[i];
     fs.stat(name, function(err, stats){
